@@ -1,4 +1,4 @@
-name: RSS Everyday
+name: BBC中文网
 on: 
   workflow_dispatch:
   schedule:
