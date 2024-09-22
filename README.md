@@ -1,11 +1,18 @@
 # New 进击的 RSS
 
-### [中文说明](https://github.com/youguanxinqing/rss_everyday/blob/main/README.md)|[English Description](https://github.com/youguanxinqing/rss_everyday/blob/main/README_en.md)
+https://github.com/youguanxinqing/rss_everyday
 
-原项目：[进击的 RSS](https://github.com/dianbanjiu/rss_everyday)。感谢 dianbanjiu。
+https://github.com/settings/tokens/new
+New personal access token (classic)
 
-# 设计
+INDEX_ACTION_TOKEN
 
-![](img/image-20230401234256216.png)
 
-详见：[基于 Github Action 实现 RSS 订阅](https://youguanxinqing.xyz/archives/163/)
+BBC_BOTTOKEN
+BBC_CHANNELID
+
+
+https://github.com/dylanbai8/rss_telegram_bot_actions/settings/actions
+
+https://github.com/dylanbai8/rss_telegram_bot_actions/settings/secrets/actions
+
