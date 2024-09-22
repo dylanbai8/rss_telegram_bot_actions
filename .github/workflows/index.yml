@@ -1,0 +1,40 @@
+name: RSS Everyday
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */4 * * *'
+#env:
+#  TZ: Asia/Shanghai
+
+jobs:
+  search-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.19.x
+    
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
+      - name: Build
+        run: go run main.go -tg-bot=${{secrets.BOTTOKEN}} -tg-channel=${{secrets.CHANNELID}} -startby 28 -goroutine-num 15
+    
+      - name: Check if there are any changes
+        id: verify_diff
+        run: |
+          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit Files
+        if: steps.verify_diff.outputs.changed == 'true'
+        run: |
+          git config --local user.email "youguanxinqing@qq.com"
+          git config --local user.name "youguanxinqing(bot)"
+          git commit -m "update digest $(date +%Y-%m-%d)" -a
+      
+      - name: Push changes
+        if: steps.verify_diff.outputs.changed == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{secrets.INDEX_ACTION_TOKEN}}
