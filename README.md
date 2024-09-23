@@ -8,7 +8,8 @@ New personal access token (classic)
 
 ```
 INDEX_ACTION_TOKEN
-BBC_BOTTOKEN
+BOTTOKEN
+
 BBC_CHANNELID
 ```
 
@@ -16,6 +17,8 @@ BBC_CHANNELID
 https://github.com/dylanbai8/rss_telegram_bot_actions/settings/actions
 
 https://github.com/dylanbai8/rss_telegram_bot_actions/settings/secrets/actions
+
+
 
 https://web.telegram.org/
 

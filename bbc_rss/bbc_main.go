@@ -39,10 +39,10 @@ func init() {
 	BotToken = flag.String("tg-bot", "", "Telegram bot token")
 	ChannelID = flag.Int64("tg-channel", 0, "Telegram channel id")
 	StartBy = flag.Int64("startby", 6, "Start by specified time(hour)")
-	RSSFilePath = flag.String("rss-filepath", "bbc_rss.json", "Rss json file path")
+	RSSFilePath = flag.String("rss-filepath", "bbc_rss/bbc_rss.json", "Rss json file path")
 	DebugMode = flag.Bool("debug", false, "Debug mode")
 	GoroutineNum = flag.Int("goroutine-num", 5, "Goroutine num")
-	DigestFile = flag.String("digest-file", "digest_file.json", "digest file for deduplication")
+	DigestFile = flag.String("digest-file", "bbc_rss/digest_file.json", "digest file for deduplication")
 	NoNewMsgNotify = flag.Bool("no-new-msg-notify", false, "notify when no new msg")
 	flag.Parse()
 

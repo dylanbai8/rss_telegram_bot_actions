@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
     
       - name: Build
-        run: go run bbc_main.go -tg-bot=${{secrets.BBC_BOTTOKEN}} -tg-channel=${{secrets.BBC_CHANNELID}} -startby 28 -goroutine-num 15
+        run: go run bbc_rss/bbc_main.go -tg-bot=${{secrets.BOTTOKEN}} -tg-channel=${{secrets.BBC_CHANNELID}} -startby 28 -goroutine-num 15
     
       - name: Check if there are any changes
         id: verify_diff
