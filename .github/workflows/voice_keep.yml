@@ -1,0 +1,22 @@
+name: Send Email
+
+on:
+  schedule:
+    - cron: '0 9 * * *'  # 每天 9 点发送邮件
+  workflow_dispatch:
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: corkerysandersjwb97@gmail.com
+          password: ubprhxuvwjfztxfg
+          subject: '邮件标题'
+          body: '这里是你想要发送的内容'
+          to: 'maoobai@163.com'
+          from: corkerysandersjwb97@gmail.com
